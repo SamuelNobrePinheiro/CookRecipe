@@ -16,6 +16,7 @@ import { RouterView } from "vue-router";
 
 <style scoped>
 #top-bar{
+    background-color: purple;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
