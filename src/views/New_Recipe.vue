@@ -1,5 +1,5 @@
 <script setup>
-import Register_Recipe from "./views/Register_Recipe.vue"
+import showModal from "./Register_Recipe.vue"
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import Register_Recipe from "./views/Register_Recipe.vue"
     <h1 id="titulo-receitas">Suas receitas</h1>
     <p id="status-receita">Você ainda não possui nenhuma receita.</p>
 </div>
-    <button id="criar-nova-receita">Criar uma nova receita</button>
+    <button @click="showModal()" id="criar-nova-receita">Criar uma nova receita</button>
 </template>
 
 <style scoped>
@@ -29,7 +29,7 @@ import Register_Recipe from "./views/Register_Recipe.vue"
 }
 
 #criar-nova-receita{
-    margin-top: 300px;
+    top: 300px;
     left: 50%;
     transform: translate(-50%);
     position: relative;
