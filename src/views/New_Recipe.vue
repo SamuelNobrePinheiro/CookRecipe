@@ -1,4 +1,5 @@
 <script setup>
+import Register_Recipe from "./views/Register_Recipe.vue"
 </script>
 
 <template>
