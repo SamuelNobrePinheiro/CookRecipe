@@ -4,19 +4,20 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-    <div id="top-bar">
-        <img src="/src/images/logo.png" alt="" id="logo">
-        <RouterLink to="/" active-class="active" class="btn home">Home</RouterLink>
-        <RouterLink to="/Receitas" active-class="active" class="btn receitas">Receitas</RouterLink>
-        <RouterLink to="/NovaReceita" active-class="active" class="btn criar-receita">Escrever minha receita</RouterLink>
-        <RouterLink to="/Perfil" active-class="active" class="btn perfil">Perfil</RouterLink>
+    <div id="container-nav">
+        <div id="top-bar">
+            <img src="/src/images/logo.png" alt="" id="logo">
+            <RouterLink to="/" active-class="active" class="btn home">Home</RouterLink>
+            <RouterLink to="/Receitas" active-class="active logo" class="btn receitas">Receitas</RouterLink>
+            <RouterLink to="/NovaReceita" active-class="active" class="btn criar-receita">Escrever minha receita</RouterLink>
+            <RouterLink to="/Perfil" active-class="active" class="btn perfil">Perfil</RouterLink>
+        </div>
+        <RouterView/>
     </div>
-    <RouterView/>
 </template>
 
 <style scoped>
 #top-bar{
-    background-color: purple;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -27,7 +28,8 @@ import { RouterView } from "vue-router";
     transform: translate(-50%);
     z-index: 2; /* Garante que a div esteja sobreposta à imagem */
 }
-#top-bar .btn {
+
+#top-bar .btn{    
     position: relative;
     text-align: center;
     border: none;
@@ -40,30 +42,12 @@ import { RouterView } from "vue-router";
     font-size: 16px;
     color: #141414;
     text-decoration: none;
-    box-sizing: border-box;
-}
-#top-bar .btn{
-    position: relative;
-    text-align: center;
-    border: none;
-    padding: 5px 30px;
-    background-color: #F6F6F6;
-    border-radius: 50px;
-    margin: 0px 10px;
-    cursor: pointer;
-    font-family: "League Spartan", sans-serif;
-    font-size: 16px;
-    color: #141414;
-    text-decoration: none;
-    box-sizing: border-box;
 }
 
 #top-bar .active{
-    width: 120px;
     text-align: center;
     padding: 5px 30px;
     border-radius: 50px;
-    margin: 0px 10px;
     text-decoration: none;
     font-weight: bold;
     background-color: #FF8A00;
